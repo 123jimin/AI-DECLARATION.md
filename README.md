@@ -2,12 +2,13 @@
 
 [![AI-DECLARATION: copilot](https://img.shields.io/badge/䷼%20AI--DECLARATION-copilot-fee2e2?labelColor=fee2e2)](https://ai-declaration.md)
 
-## Summary
+## 개요
+
 AI-generated code is a reality of our time and it is both a blessing and a curse. The problem is not the code in itself but transparency and clarity. At least, that is the working theory of this specification. The suggestion is simple: to invite everyone to include a structured `AI-DECLARATION.md` file like they include other files in a repository to make the AI-usage crystal clear _and_, more importantly, to make it a widespread convention to do so.
 
 This is not to discourage usage of LLM- and other code-generation in the future. On the contrary, it is an enabler. When you declare what parts of the code were, in fact, generated, a skeptic can immediately look into just those parts to satisfy their urge to re-verify and double-check. And, it lets the creator showcase their skillset with code and their skillset with planning and other soft skills simultaneously and with clarity.
 
-### Specification
+### 사양서
 
 An `AI-DECLARATION.md` file uses YAML frontmatter for structured fields, followed by a required `## Notes` section in the markdown body for human context. At minimum, it requires `version`, `level`, and a `## Notes` section.
 
@@ -15,7 +16,7 @@ Optionally, you can declare `processes`, each with their own level. The global `
 
 The specification formally defines `version`, `level`, `processes`, and `components`.
 
-#### Levels
+#### 단계 (`level`)
 
 - `none`: No AI tools were used at any point.
 - `hint`: AI autocomplete or inline suggestions only. The human writes all code. AI occasionally completes a line or block.
@@ -24,7 +25,7 @@ The specification formally defines `version`, `level`, `processes`, and `compone
 - `copilot`: AI implements while the human plans and reviews. The human defines what to build and validates the output, but the AI does most of the writing.
 - `auto`: AI acts autonomously with minimal human direction. The human may steer at a high level or approve outcomes, but does not write or closely direct the code.
 
-#### Processes
+#### 과정 (`processes`)
 
 - `design`: Architecture, system design, and decision-making.
 - `implementation`: Writing production code.
@@ -33,7 +34,7 @@ The specification formally defines `version`, `level`, `processes`, and `compone
 - `review`: Code review and pull request feedback.
 - `deployment`: CI/CD configuration, infrastructure, and release scripts.
 
-### Schema
+### 스키마
 
 The following YAML schema formally defines the structure of an `AI-DECLARATION.md` file. Use this to validate declarations or build tooling.
 
@@ -63,11 +64,11 @@ properties:
 additionalProperties: false
 ```
 
-### Examples
+### 예시
 
 Below, you will find some examples of different scenarios.
 
-#### Simple
+#### 간단한 예시
 
 The simplest `AI-DECLARATION.md` requires `version`, `level`, and a `## Notes` section.
 
@@ -97,7 +98,7 @@ This format is based on [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1).
 - Claude Code was used to create the whole application.
 ```
 
-#### With Processes
+#### `processes` 사용
 
 Use `processes` to granularly declare AI involvement per development phase. The global `level` must be the highest level present. Any process not listed is assumed to be `none` implicitly.
 
@@ -117,7 +118,7 @@ This format is based on [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1).
 - AI drove architecture decisions and test generation. All output was reviewed by a human.
 ```
 
-#### With Components
+#### `components` 사용
 
 Use `components` to declare AI involvement for specific files or directories.
 
@@ -136,7 +137,7 @@ This format is based on [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1).
 - The helpers directory was fully generated. All other code is human-written.
 ```
 
-## Badges
+## 배지
 
 Add a badge to your `README` to declare your `AI-DECLARATION` level at a glance. Please note, this is just for convenience and to comply with the specification, you _must_ include an `AI-DECLARATION.md` file.
 

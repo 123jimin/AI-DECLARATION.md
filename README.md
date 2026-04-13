@@ -72,6 +72,20 @@ additionalProperties: false
 
 가장 단순한 형태의 `AI-DECLARATION.md`에는 `version`, `level`, 그리고 `## Notes` 섹션이 있어야 합니다.
 
+```markdown
+---
+version: "0.1.1"
+level: none
+---
+
+이 파일은 [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1) 명세를 바탕으로 작성되었습니다.
+
+## Notes
+
+- 어떠한 AI 도구도 사용하지 않았습니다.
+```
+
+
 > 여기까지 리뷰 및 수정 완료.
 >
 > 이하는 초벌 번역 (기계번역)
@@ -80,23 +94,10 @@ additionalProperties: false
 ```markdown
 ---
 version: "0.1.1"
-level: none
----
-
-이 형식은 [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1)를 기반으로 합니다.
-
-## Notes
-
-- 어떠한 AI 도구도 사용하지 않았습니다.
-```
-
-```markdown
----
-version: "0.1.1"
 level: auto
 ---
 
-이 형식은 [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1)를 기반으로 합니다.
+이 파일은 [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1) 명세를 바탕으로 작성되었습니다.
 
 ## Notes
 
@@ -116,7 +117,7 @@ processes:
   testing: copilot
 ---
 
-이 형식은 [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1)를 기반으로 합니다.
+이 파일은 [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1) 명세를 바탕으로 작성되었습니다.
 
 ## Notes
 
@@ -135,7 +136,7 @@ components:
   src/helpers: auto
 ---
 
-이 형식은 [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1)를 기반으로 합니다.
+이 파일은 [AI-DECLARATION.md](https://ai-declaration.md/en/0.1.1) 명세를 바탕으로 작성되었습니다.
 
 ## Notes
 

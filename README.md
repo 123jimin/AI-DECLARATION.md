@@ -85,12 +85,6 @@ level: none
 - 어떠한 AI 도구도 사용하지 않았습니다.
 ```
 
-
-> 여기까지 리뷰 및 수정 완료.
->
-> 이하는 초벌 번역 (기계번역)
-
-
 ```markdown
 ---
 version: "0.1.1"
@@ -101,12 +95,12 @@ level: auto
 
 ## Notes
 
-- 전체 애플리케이션을 제작하는 데 Claude Code를 사용했습니다.
+- Claude Code를 사용하여 애플리케이션 전체를 개발했습니다.
 ```
 
 #### `processes` 사용
 
-개발 단계별 AI 참여도를 세밀하게 선언하려면 `processes`를 사용하세요. 전역 `level`은 명시된 단계 중 가장 높은 단계를 지정해야 합니다. 목록에 없는 과정은 암묵적으로 `none`으로 간주됩니다.
+개발 단계별 AI 참여도를 더 세밀하게 선언하려면 `processes`를 사용하세요. 전역 `level`은 하위 단계 중 가장 높은 단계로 지정해야 합니다. 명시되지 않은 과정은 암묵적으로 `none`으로 간주됩니다.
 
 ```markdown
 ---
@@ -126,7 +120,7 @@ processes:
 
 #### `components` 사용
 
-특정 파일이나 디렉터리의 AI 참여도를 선언하려면 `components`를 사용하세요.
+특정 파일이나 디렉터리에 대한 AI 참여도를 선언하려면 `components`를 사용하세요.
 
 ```markdown
 ---
@@ -140,12 +134,12 @@ components:
 
 ## Notes
 
-- helpers 디렉터리는 100% AI가 생성했습니다. 그 외의 모든 코드는 사람이 직접 작성했습니다.
+- helpers 디렉터리 내의 코드는 전적으로 AI가 생성했습니다. 그 외의 모든 코드는 사람이 직접 작성했습니다.
 ```
 
-## 배지 (Badges)
+## 배지
 
-`README` 파일에 배지를 추가하여 귀하의 `AI-DECLARATION` 단계를 한눈에 보여줄 수 있습니다. 단, 배지는 편의를 위한 것이며 명세서를 제대로 준수하려면 _반드시_ `AI-DECLARATION.md` 파일을 포함해야 합니다.
+프로젝트의 `README` 파일에 배지를 추가하면 `AI-DECLARATION` 단계를 한눈에 보여줄 수 있습니다. 단, 배지는 편의를 위한 시각적 도구일 뿐이므로 명세를 올바르게 준수하려면 **반드시** 본 프로젝트에 `AI-DECLARATION.md` 파일을 포함해야 합니다.
 
 - [![AI-DECLARATION: none](https://img.shields.io/badge/䷼%20AI--DECLARATION-none-dcfce7?labelColor=dcfce7)](https://ai-declaration.md)
 - [![AI-DECLARATION: hint](https://img.shields.io/badge/䷼%20AI--DECLARATION-hint-ecfccb?labelColor=ecfccb)](https://ai-declaration.md)
@@ -154,22 +148,22 @@ components:
 - [![AI-DECLARATION: copilot](https://img.shields.io/badge/䷼%20AI--DECLARATION-copilot-fee2e2?labelColor=fee2e2)](https://ai-declaration.md)
 - [![AI-DECLARATION: auto](https://img.shields.io/badge/䷼%20AI--DECLARATION-auto-ede9fe?labelColor=ede9fe)](https://ai-declaration.md)
 
-## 자주 묻는 질문 (FAQ)
+## 자주 묻는 질문
 
 ### 선언 파일에 거짓말을 적으면 어떻게 되나요?
-글쎄요, 그러면 이 선언의 목적 자체가 무의미해지겠죠? 이 아이디어의 핵심은 우리 모두가 신뢰할 수 있는 일종의 사회적 계약(social contract)을 맺는 데 있습니다. 저장소에 `AI-DECLARATION.md`가 보인다면, 누구나 이를 굳게 믿을 수 있는 단일 진실 공급원(single source of truth)으로 보자는 것입니다.
+그렇게 한다면 이 선언이 존재하는 이유 자체가 무의미해지겠죠? 이 제안의 핵심은 우리 모두가 신뢰할 수 있는 일종의 사회적 계약을 맺는 것입니다. 프로젝트 저장소에 `AI-DECLARATION.md`가 있다면, 누구나 이를 믿고 의지할 수 있는 단일 진실의 원천(Single Source of Truth)으로 삼게 하자는 것이 목표입니다.
 
-### 이 파일을 자동으로 생성하는 도구를 만들어도 되나요?
-얼마든지 환영합니다. 저는 자동 생성 도구는 물론, 파싱(parsing) 도구 생태계가 마련되는 것을 기대하고 있습니다. 언젠가는 저도 직접 만들겠지만, 여러분의 모든 기여는 언제나 감사합니다.
+### 이 파일을 자동으로 생성하는 도구를 개발해도 될까요?
+물론입니다. 얼마든지 만들어주세요! 저는 이 명세 파일을 자동으로 생성하는 도구뿐만 아니라 파싱 도구 등 관련 생태계가 널리 구축되기를 고대하고 있습니다. 언젠가는 저도 직접 도구를 개발하겠지만, 생태계 확장을 위한 여러분의 모든 기여는 언제나 큰 환영입니다.
 
-### 번역에 기여해도 되나요?
-물론입니다! 꼭 부탁드립니다. 저장소를 포크(fork)한 뒤 `README_ko.md`처럼 `README_<언어코드>.md` 파일을 추가해 주세요. 그런 다음 PR(Pull Request)을 올려주시면, 확인 후 처리하겠습니다.
+### 번역 작업에 기여하고 싶은데 어떻게 하나요?
+물론입니다! 언제든 부탁드립니다. 저장소를 포크한 뒤 `README_ko.md`처럼 `README_<언어코드>.md` 형식으로 파일을 추가해 주세요. 그런 다음 PR을 올려주시면 감사한 마음으로 리뷰하고 머지하겠습니다.
 
-### 명세 내용 변경을 제안하고 싶습니다.
-이 프로젝트가 오픈소스라서 다행이네요! 이 명세서는 피드백과 PR을 통해 자연스럽게 진화할 것입니다. 오셔서 언제든 함께 논의합시다.
+### 명세의 내용을 수정하거나 추가 제안을 하고 싶습니다.
+이 프로젝트가 오픈소스인 이유가 바로 그것입니다! 이 명세서는 개발자분들의 소중한 피드백과 PR을 통해 자연스럽게 진화해 나갈 것입니다. 언제든 편하게 오셔서 함께 논의해 봅시다.
 
-### README에 배지를 달았는데도 파일을 꼭 포함해야 하나요?
-네. 진실의 원천(primary source of truth)으로서 `AI-DECLARATION.md` 파일을 포함할 것을 권장합니다. `README`에 있는 배지는 가볍게 훑어볼 수 있는 용도로, (A) `AI-DECLARATION.md` 파일이 존재함을 알리고, (B) 그 단계가 무엇인지 누구나 알아보기 쉽게 보여주는 역할을 할 뿐입니다.
+### README에 배지를 달았는데도 꼭 파일을 포함해야 하나요?
+네, 진실의 원천으로서 `AI-DECLARATION.md` 파일 자체를 포함할 것을 강력히 권장합니다. `README`에 추가하는 배지는 단지 방문자에게 (A) 프로젝트 내에 명세 파일이 존재한다는 사실과 (B) 프로젝트의 AI 사용 단계를 한눈에 가볍게 보여주는 보조 수단일 뿐입니다.
 
-### 로고는 무슨 의미인가요?
-䷼ 주역의 64괘 중 61번째 괘인 '중부(中孚)' 괘입니다(유니코드: `U+4DFC`). ([출처](https://en.wikipedia.org/wiki/List_of_hexagrams_of_the_I_Ching#Hexagram_61))
+### 로고에는 어떤 의미가 담겨 있나요?
+䷼ 61번째 괘인 '중부(中孚)'를 뜻하는 괘입니다(유니코드: `U+4DFC`). 이는 주역의 64괘 중 하나로, 각각의 효가 음(끊어짐) 또는 양(이어짐)으로 이루어져 있는 만물의 원리를 나타냅니다. ([출처](https://en.wikipedia.org/wiki/List_of_hexagrams_of_the_I_Ching#Hexagram_61))
